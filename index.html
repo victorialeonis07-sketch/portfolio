@@ -28,11 +28,74 @@ body:before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.17;ba
 <section class="hero wrap"><div class="eyebrow">Independent digital design studio · Worldwide</div><h1>Make your brand<br><em>unforgettable.</em></h1><p>Bespoke animated digital business cards and interactive mini websites — crafted to turn one simple link into a memorable brand experience.</p><a class="outline-btn" href="#portfolio">Discover the portfolio <span aria-hidden="true">↗</span></a><span class="rule" aria-hidden="true"></span></section>
 <section class="work wrap" id="portfolio"><div class="section-head"><div><div class="eyebrow">01 / Selected creations</div><h2>The Portfolio</h2></div><p>Explore real, interactive projects. Select “View project” to open the full digital experience.</p></div>
 <div class="projects">
-<article class="project"><div class="project-art"><span class="project-index">PROJECT NO. 001</span><iframe src="le-scandale.html" title="Le Scandale Maison de Parfum — interactive preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div><div class="project-caption"><div><h3>Le Scandale — Maison de Parfum</h3><p>Luxury fragrance · Animated digital business card</p></div><a class="small-link" href="le-scandale.html" target="_blank" rel="noopener noreferrer">View project ↗</a></div></article>
-<article class="future"><div class="future-art"><div><div class="monogram">✧</div><div class="coming">The next creation</div><div class="fine">A new story is coming</div></div></div><h3>Coming soon</h3><p>New bespoke digital experiences in progress</p></article>
+  <article class="project-feature">
+    <div class="project-art">
+      <span class="project-index">PROJECT NO. 001 / LIVE PREVIEW</span>
+      <div class="preview-stage">
+        <div class="preview-frame" id="preview-frame">
+          <iframe src="le-scandale.html" title="Le Scandale — Maison de Parfum preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        </div>
+      </div>
+      <span class="preview-note">FULL DESIGN · ORIGINAL PROPORTIONS</span>
+    </div>
+    <div class="project-description">
+      <div class="eyebrow">01 / Fragrance & luxury</div>
+      <h3>Le Scandale <em>— Maison de Parfum</em></h3>
+      <p class="lead">An immersive digital business card for a luxury perfume brand.</p>
+      <p>A dramatic black-and-bronze identity with a signature panther motif, refined typography and an elegant mobile-first experience.</p>
+      <div class="project-details">
+        <div><span>FORMAT</span><strong>Animated digital business card</strong></div>
+        <div><span>FEATURES</span><strong>Social media · Direct contact · Ordering</strong></div>
+        <div><span>STYLE</span><strong>Luxury · Dark · Metallic accents</strong></div>
+      </div>
+      <a class="outline-btn" href="le-scandale.html" target="_blank" rel="noopener noreferrer">View full interactive card <span aria-hidden="true">↗</span></a>
+    </div>
+  </article>
+  <article class="next-project"><span class="eyebrow">02 / Next creation</span><h3>Every brand deserves its own story.</h3><p>More bespoke digital experiences coming soon.</p></article>
 </div></section>
 <section class="services wrap" id="services"><div><div class="eyebrow">02 / What I create</div><h2>Design that<br><em>connects.</em></h2><p>Beautiful, mobile-friendly digital experiences that make it effortless for customers to discover your brand, follow your social media and get in touch.</p></div><div class="service-list"><div class="service-row"><span>01</span>Animated digital business cards</div><div class="service-row"><span>02</span>Interactive mini websites</div><div class="service-row"><span>03</span>Social media & contact integration</div><div class="service-row"><span>04</span>Custom visual identities</div></div></section>
 <section class="contact wrap" id="contact"><div class="eyebrow">03 / Your next project</div><h2>Let's create something<br><em>remarkable.</em></h2><p>Every brand has its own story. Let's give yours a beautiful digital presence. Contact details will be added here when ready.</p><a class="outline-btn" href="#portfolio">Explore the work <span aria-hidden="true">↗</span></a></section>
 </main>
 <footer class="footer wrap"><span>© 2026 Digital Card Studio</span><span>Custom digital design · Worldwide</span></footer>
+
+<style>
+/* Portfolio projects: preserve the original card's mobile viewport and scale it uniformly. */
+.projects{display:block;margin-top:32px}
+.project-feature{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,5vw,80px);align-items:center;border:1px solid #4c3a2d;background:linear-gradient(130deg,#100e0c,#080808 68%);padding:clamp(16px,3.5vw,45px)}
+.project-art{min-height:0;height:auto;aspect-ratio:5/6.3;max-height:700px;overflow:hidden;position:relative;display:flex;justify-content:center;align-items:center;background:radial-gradient(ellipse at center,#30241c 0%,#100e0c 53%,#050505 100%);border:1px solid #3d3129}
+.project-art:after{box-shadow:inset 0 0 55px #0008}
+.preview-stage{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:30px 12px 24px}
+.preview-frame{position:relative;width:390px;height:844px;flex:none;transform-origin:center center;border:1px solid #b69a7b;border-radius:24px;overflow:hidden;box-shadow:0 0 38px #b89a6d36;background:#000}
+.preview-frame iframe{display:block;position:absolute;inset:0;width:390px;height:844px;max-width:none;max-height:none;border:0;border-radius:0;transform:none;pointer-events:none;background:#000}
+.preview-note{position:absolute;bottom:14px;left:18px;right:18px;z-index:3;text-align:center;font-size:9px;letter-spacing:.17em;color:#bfa88c}
+.project-index{font-size:9px;left:18px;top:16px}
+.project-description{padding:clamp(10px,2vw,30px) 0}
+.project-description h3{font:400 clamp(42px,4.4vw,68px)/.96 'Cormorant Garamond',serif;letter-spacing:-.025em;margin:24px 0}
+.project-description h3 em{display:block;font-weight:400;color:var(--gold)}
+.project-description p{font-size:13px;line-height:1.9;color:var(--muted);max-width:410px}
+.project-description .lead{font-size:17px;line-height:1.5;color:var(--paper)}
+.project-details{margin:32px 0;border-top:1px solid #4b3c30}
+.project-details div{display:grid;grid-template-columns:78px 1fr;gap:12px;border-bottom:1px solid #302923;padding:15px 0}
+.project-details span{font-size:9px;letter-spacing:.17em;color:var(--gold)}
+.project-details strong{font-size:12px;font-weight:400;line-height:1.5;color:#e4d7c7}
+.next-project{border-bottom:1px solid var(--line);padding:55px 0 25px;display:flex;gap:30px;align-items:center;justify-content:space-between}
+.next-project h3{font:400 clamp(25px,3vw,40px)/1 'Cormorant Garamond',serif;margin:0}
+.next-project p{font-size:11px;color:var(--muted);max-width:190px;line-height:1.6}
+@media(max-width:900px){.project-feature{grid-template-columns:1fr}.project-art{aspect-ratio:5/5.8;max-height:680px}.project-description{padding:15px 5px 20px}.next-project{flex-wrap:wrap;gap:15px}}
+@media(max-width:480px){.project-feature{padding:12px}.project-art{aspect-ratio:4/5.5}.preview-stage{padding:35px 8px 24px}.project-description h3{font-size:45px}.next-project{display:block}.next-project h3{margin:14px 0}}
+</style>
+<script>
+(function(){
+  const stage=document.querySelector('.preview-stage');
+  const frame=document.getElementById('preview-frame');
+  if(!stage||!frame)return;
+  function fit(){
+    const scale=Math.min((stage.clientWidth-12)/390,(stage.clientHeight-12)/844,1);
+    frame.style.transform='scale('+Math.max(.1,scale)+')';
+  }
+  new ResizeObserver(fit).observe(stage);
+  window.addEventListener('load',fit);
+  fit();
+})();
+</script>
 </body></html>
